@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://uot8y2iuno6i"]
+[gd_scene format=3 uid="uid://c8l4xmoeqi7vb"]
 
 [ext_resource type="PackedScene" uid="uid://b1m7o2nmwtyo0" path="res://Insect/insect.tscn" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://di2qts70ubsv1" path="res://Animal Players/Bat/bat.tscn" id="1_fj7yv"]
