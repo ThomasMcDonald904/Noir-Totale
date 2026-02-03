@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b1m7o2nmwtyo0"]
+
+[ext_resource type="Script" uid="uid://dmwgluevljkm1" path="res://Insect/insect.gd" id="1_fx0t0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhvg5"]
+emission_enabled = true
+emission = Color(0.65809923, 0.6580988, 5.7756904e-07, 1)
+emission_energy_multiplier = 13.04
+
+[sub_resource type="SphereMesh" id="SphereMesh_2jekt"]
+material = SubResource("StandardMaterial3D_nhvg5")
+radius = 0.05
+height = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1kt6d"]
+radius = 0.09609675
+
+[node name="Insect" type="Area3D" unique_id=2126446087]
+script = ExtResource("1_fx0t0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1469900414]
+transparency = 0.59
+mesh = SubResource("SphereMesh_2jekt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=723188237]
+shape = SubResource("SphereShape3D_1kt6d")

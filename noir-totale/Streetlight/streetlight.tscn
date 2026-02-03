@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://crwv8xp61ohlf"]
+
+[ext_resource type="PackedScene" uid="uid://coy53tdc3mkyj" path="res://Streetlight/Utility Pole StreetLight.glb" id="1_8mcet"]
+
+[node name="Streetlight" type="Node3D" unique_id=2010003233]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2012807981]
+transform = Transform3D(0.9994137, 1.4965323e-09, -0.03423667, 0.03423667, -4.3685763e-08, 0.9994137, 0, -1, -4.371139e-08, 0.47688675, 1.4883517, 0)
+light_energy = 7.2
+light_volumetric_fog_energy = 3.218
+spot_range = 6.1011233
+
+[node name="Utility Pole StreetLight" parent="." unique_id=1656065145 instance=ExtResource("1_8mcet")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.081, 0, 0)

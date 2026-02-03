@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://uot8y2iuno6i"]
+
+[ext_resource type="PackedScene" uid="uid://b1m7o2nmwtyo0" path="res://Insect/insect.tscn" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://di2qts70ubsv1" path="res://Animal Players/Bat/bat.tscn" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://crwv8xp61ohlf" path="res://Streetlight/streetlight.tscn" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://b7xotth7g1y3g" path="res://World/trailer_park.glb" id="3_tlwt5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
+energy_multiplier = 0.1
+
+[sub_resource type="Sky" id="Sky_tlwt5"]
+sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
+
+[sub_resource type="Environment" id="Environment_aqk2v"]
+background_mode = 2
+background_energy_multiplier = 1.2
+sky = SubResource("Sky_tlwt5")
+glow_enabled = true
+glow_strength = 0.8
+glow_bloom = 0.5
+fog_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.039215688, 0.050980393, 0.07058824, 1)
+volumetric_fog_anisotropy = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tlwt5"]
+size = Vector3(122.03179, 0.068359375, 96.795)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aqk2v"]
+size = Vector3(4.114825, 4.1488037, 15.374062)
+
+[node name="World" type="Node3D" unique_id=1162110130]
+
+[node name="Insect" parent="." unique_id=2126446087 instance=ExtResource("1_aqk2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.180938, 3.583867, 18.649738)
+
+[node name="Streetlight" parent="." unique_id=2010003233 instance=ExtResource("1_tlwt5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.7353973, -0.48098105, 18.69352)
+
+[node name="Bat" parent="." unique_id=795369276 instance=ExtResource("1_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.756258, 20.924046)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1278814296]
+environment = SubResource("Environment_aqk2v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=430690072]
+transform = Transform3D(1, 0, 0, 0, 0.6091629, -0.79304516, 0, 0.79304516, 0.6091629, 15.39088, -0.7291641, 227.99211)
+light_color = Color(0.82463723, 0.8915544, 1, 1)
+light_energy = 1.35
+
+[node name="Sketchfab_Scene" parent="." unique_id=1136670966 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8076477, 0.35463715, 1.0208206)
+
+[node name="Colliders" type="Node" parent="." unique_id=15073650]
+
+[node name="Floor" type="StaticBody3D" parent="Colliders" unique_id=915264354]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Floor" unique_id=1397653159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4658203, 0)
+shape = SubResource("BoxShape3D_tlwt5")
+
+[node name="TrailerHouse" type="StaticBody3D" parent="Colliders" unique_id=1028944010]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse" unique_id=1008010054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
+shape = SubResource("BoxShape3D_aqk2v")
+
+[node name="TrailerHouse2" type="StaticBody3D" parent="Colliders" unique_id=1916776374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.555807, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse2" unique_id=23722159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
+shape = SubResource("BoxShape3D_aqk2v")
+
+[node name="TrailerHouse3" type="StaticBody3D" parent="Colliders" unique_id=192448945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.21498, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse3" unique_id=1038553233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
+shape = SubResource("BoxShape3D_aqk2v")
+
+[node name="TrailerHouse4" type="StaticBody3D" parent="Colliders" unique_id=80670744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.158707, 0, 38.936466)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse4" unique_id=1955444998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
+shape = SubResource("BoxShape3D_aqk2v")
+
+[node name="TrailerHouse5" type="StaticBody3D" parent="Colliders" unique_id=2093972445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.366804, 0, 38.564095)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse5" unique_id=1076350392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
+shape = SubResource("BoxShape3D_aqk2v")
+
+[node name="TrailerHouse5" type="StaticBody3D" parent="Colliders/TrailerHouse5" unique_id=1938848953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.416655, 0, 0.21074295)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse5/TrailerHouse5" unique_id=2075443127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
+shape = SubResource("BoxShape3D_aqk2v")

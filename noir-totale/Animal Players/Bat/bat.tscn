@@ -3,10 +3,21 @@
 [ext_resource type="Script" uid="uid://qxi30kptpeye" path="res://Animal Players/Bat/bat.gd" id="1_hqms4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1wgdk"]
-height = 1.5
+radius = 0.054
+height = 0.108
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hqms4"]
-height = 2.1240234
+radius = 0.9013672
+height = 1.8027344
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wgdk"]
+albedo_color = Color(0.05730225, 0.5238335, 0.827649, 1)
+emission_enabled = true
+emission = Color(0, 0.34641844, 0.6691574, 1)
+emission_energy_multiplier = 3.31
+
+[sub_resource type="SphereMesh" id="SphereMesh_1wgdk"]
+material = SubResource("StandardMaterial3D_1wgdk")
 
 [node name="Bat" type="CharacterBody3D" unique_id=795369276]
 script = ExtResource("1_hqms4")
@@ -15,8 +26,19 @@ script = ExtResource("1_hqms4")
 mesh = SubResource("CapsuleMesh_1wgdk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1059887848]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06201172, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0034484863, 0)
 shape = SubResource("CapsuleShape3D_hqms4")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=144208946]
-transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 1.2293309, 1.8499863)
+transform = Transform3D(1, 0, 0, 0, 0.89139444, 0.45322832, 0, -0.45322832, 0.89139444, 0, 1.8957347, 3.54464)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=148807289]
+
+[node name="FeedingCollisionShape" type="CollisionShape3D" parent="Area3D" unique_id=1931756735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0068969727, 0)
+shape = SubResource("CapsuleShape3D_hqms4")
+
+[node name="EcholocationPulse" type="MeshInstance3D" parent="." unique_id=334381660]
+visible = false
+transparency = 0.91
+mesh = SubResource("SphereMesh_1wgdk")
