@@ -22,6 +22,23 @@ var hunger := 100.0
 var flap_timer := 0.0
 var crashed := false
 
+
+var shake := 0.0
+
+func add_shake(amount):
+	shake = amount
+
+func _process(delta):
+	if shake > 0:
+		shake -= delta * 5.0
+		var offset = Vector3(
+			randf_range(-shake, shake),
+			randf_range(-shake, shake),
+			randf_range(-shake, shake)
+		)
+		global_position += offset
+
+
 func _physics_process(delta):
 	flap_timer -= delta
 
@@ -105,3 +122,6 @@ func eat_insect():
 	hunger += hunger_gain
 	hunger = clamp(hunger, 0, 100)
 	print("Ate insect! Hunger:", hunger)
+
+func apply_repulsion(force: Vector3):
+	velocity = force

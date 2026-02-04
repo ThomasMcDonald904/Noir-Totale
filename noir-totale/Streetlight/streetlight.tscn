@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://crwv8xp61ohlf"]
 
 [ext_resource type="PackedScene" uid="uid://coy53tdc3mkyj" path="res://Streetlight/Utility Pole StreetLight.glb" id="1_8mcet"]
+[ext_resource type="Script" uid="uid://cg54w2fq5eceg" path="res://Streetlight/LightRepulsion.gd" id="2_7hb2q"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8mcet"]
+radius = 3.0
 
 [node name="Streetlight" type="Node3D" unique_id=2010003233]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
@@ -13,3 +17,10 @@ spot_range = 6.1011233
 
 [node name="Utility Pole StreetLight" parent="." unique_id=1656065145 instance=ExtResource("1_8mcet")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.081, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=13351234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0131031675, 0)
+script = ExtResource("2_7hb2q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=178513582]
+shape = SubResource("SphereShape3D_8mcet")

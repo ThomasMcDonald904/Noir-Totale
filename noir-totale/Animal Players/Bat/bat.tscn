@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://di2qts70ubsv1"]
+[gd_scene format=4 uid="uid://bgugmak4a77mm"]
 
 [ext_resource type="Script" uid="uid://qxi30kptpeye" path="res://Animal Players/Bat/bat.gd" id="1_hqms4"]
 [ext_resource type="Texture2D" uid="uid://dq65kr0gjwbiy" path="res://Animal Players/Bat/Animated Bat/bat.jpg" id="2_hqms4"]

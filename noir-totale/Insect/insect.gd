@@ -37,9 +37,9 @@ func _on_area_entered(area):
 func reveal():
 	$MeshInstance3D.mesh.material.emission = Color(1, 1, 1)
 	$MeshInstance3D.mesh.material.emission_energy_multiplier = 30
-
+	$MeshInstance3D.scale = Vector3(2,2,2)
 	# fade back after a moment
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(2).timeout
 	$MeshInstance3D.mesh.material.emission = Color('a8a800')
 	$MeshInstance3D.mesh.material.emission_energy_multiplier = 13
-	
+	$MeshInstance3D.scale = Vector3(1,1,1)
