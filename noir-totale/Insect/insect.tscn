@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b1m7o2nmwtyo0"]
 
 [ext_resource type="Script" uid="uid://dmwgluevljkm1" path="res://Insect/insect.gd" id="1_fx0t0"]
+[ext_resource type="AudioStream" uid="uid://baynj4kewlwee" path="res://Audio/fly_buzz.wav" id="2_ffs5a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhvg5"]
 emission_enabled = true
 emission = Color(0.65809923, 0.6580988, 5.7756904e-07, 1)
-emission_energy_multiplier = 13.04
+emission_energy_multiplier = 13.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_2jekt"]
 material = SubResource("StandardMaterial3D_nhvg5")
@@ -18,9 +19,15 @@ radius = 0.09609675
 [node name="Insect" type="Area3D" unique_id=2126446087 groups=["insects"]]
 script = ExtResource("1_fx0t0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1469900414]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1469900414 groups=["insects"]]
 transparency = 0.59
 mesh = SubResource("SphereMesh_2jekt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=723188237]
 shape = SubResource("SphereShape3D_1kt6d")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=533768243]
+stream = ExtResource("2_ffs5a")
+volume_db = -20.0
+autoplay = true
+max_distance = 8.0

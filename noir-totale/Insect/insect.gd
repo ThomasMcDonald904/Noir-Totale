@@ -35,12 +35,11 @@ func _on_body_entered(body):
 		queue_free()
 		
 func reveal():
-	if $MeshInstance3D.material_override:
-		$MeshInstance3D.material_override.emission_enabled = true
-		$MeshInstance3D.material_override.emission = Color(1, 1, 1)
-		$MeshInstance3D.material_override.emission_energy = 2.0
+	$MeshInstance3D.mesh.material.emission = Color(1, 1, 1)
+	$MeshInstance3D.mesh.material.emission_energy_multiplier = 30
 
 	# fade back after a moment
 	await get_tree().create_timer(0.5).timeout
-	if $MeshInstance3D.material_override:
-		$MeshInstance3D.material_override.emission_energy = 0.0
+	$MeshInstance3D.mesh.material.emission = Color('a8a800')
+	$MeshInstance3D.mesh.material.emission_energy_multiplier = 13
+	

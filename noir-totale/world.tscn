@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://crwv8xp61ohlf" path="res://Streetlight/streetlight.tscn" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://b7xotth7g1y3g" path="res://World/trailer_park.glb" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://box5yls1va82w" path="res://Animal Players/Bat/bat.scn" id="4_aqk2v"]
+[ext_resource type="AudioStream" uid="uid://bvqxho1jdf8i6" path="res://Audio/background_nature.wav" id="5_036b0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 energy_multiplier = 0.1
@@ -100,3 +101,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.416655, 0, 0.21074295)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/TrailerHouse5/TrailerHouse5" unique_id=2075443127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8865926, 1.5521336, 3.2949944)
 shape = SubResource("BoxShape3D_aqk2v")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=817414151]
+stream = ExtResource("5_036b0")
+volume_db = -10.0
+autoplay = true
