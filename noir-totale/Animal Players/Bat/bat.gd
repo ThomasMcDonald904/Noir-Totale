@@ -12,7 +12,7 @@ extends CharacterBody3D
 var pulse_active := false
 var pulse_radius := 0.0
 @export var pulse_speed := 10.0
-@export var pulse_max_radius := 100
+@export var pulse_max_radius := 15
 
 var hunger := 100.0
 @export var hunger_rate := 5.0

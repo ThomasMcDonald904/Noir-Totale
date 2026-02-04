@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://c8l4xmoeqi7vb"]
+[gd_scene format=3 uid="uid://uot8y2iuno6i"]
 
 [ext_resource type="PackedScene" uid="uid://b1m7o2nmwtyo0" path="res://Insect/insect.tscn" id="1_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://di2qts70ubsv1" path="res://Animal Players/Bat/bat.tscn" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://crwv8xp61ohlf" path="res://Streetlight/streetlight.tscn" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://b7xotth7g1y3g" path="res://World/trailer_park.glb" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://box5yls1va82w" path="res://Animal Players/Bat/bat.scn" id="4_aqk2v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 energy_multiplier = 0.1
@@ -38,9 +38,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.180938, 3.583867, 18.649738
 [node name="Streetlight" parent="." unique_id=2010003233 instance=ExtResource("1_tlwt5")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 7.7353973, -0.48098105, 18.69352)
 
-[node name="Bat" parent="." unique_id=795369276 instance=ExtResource("1_fj7yv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.756258, 20.924046)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1278814296]
 environment = SubResource("Environment_aqk2v")
 
@@ -51,6 +48,9 @@ light_energy = 1.35
 
 [node name="Sketchfab_Scene" parent="." unique_id=1136670966 instance=ExtResource("3_tlwt5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8076477, 0.35463715, 1.0208206)
+
+[node name="Bat" parent="." unique_id=795369276 instance=ExtResource("4_aqk2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.216567, 0, 17.781841)
 
 [node name="Colliders" type="Node" parent="." unique_id=15073650]
 
