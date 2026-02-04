@@ -9,7 +9,7 @@ var center_position := Vector3.ZERO
 func _ready():
 	center_position = global_position
 	_pick_new_direction()
-	connect("body_entered", _on_body_entered)
+	connect("area_entered", _on_area_entered)
 
 func _physics_process(delta):
 	translate(direction * wander_speed * delta)
@@ -29,9 +29,9 @@ func _pick_new_direction():
 		randf_range(-1, 1)
 	).normalized()
 
-func _on_body_entered(body):
-	if body.has_method("eat_insect"):
-		body.eat_insect()
+func _on_area_entered(area):
+	if area.get_parent().has_method("eat_insect"):
+		area.get_parent().eat_insect()
 		queue_free()
 		
 func reveal():

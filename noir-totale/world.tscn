@@ -51,7 +51,7 @@ light_energy = 1.35
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8076477, 0.35463715, 1.0208206)
 
 [node name="Bat" parent="." unique_id=795369276 instance=ExtResource("4_aqk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.216567, 0, 17.781841)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.216568, 8.438657, -9.181716)
 
 [node name="Colliders" type="Node" parent="." unique_id=15073650]
 
@@ -106,3 +106,30 @@ shape = SubResource("BoxShape3D_aqk2v")
 stream = ExtResource("5_036b0")
 volume_db = -10.0
 autoplay = true
+
+[node name="Insect2" parent="." unique_id=1608781788 instance=ExtResource("1_aqk2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.723125, 1.7930536, 23.456465)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1337728480]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=371198616]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -76.0
+offset_right = 248.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1722025079]
+visible = false
+offset_right = 496.0
+offset_bottom = 64.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/VBoxContainer" unique_id=171694064]
+layout_mode = 2
+text = "Hunger"

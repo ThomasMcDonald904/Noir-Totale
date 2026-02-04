@@ -101,6 +101,7 @@ func _on_hit_obstacle(_collision):
 	velocity *= 0.01
 
 func eat_insect():
+	$Node/EatingSound.play()
 	hunger += hunger_gain
 	hunger = clamp(hunger, 0, 100)
 	print("Ate insect! Hunger:", hunger)

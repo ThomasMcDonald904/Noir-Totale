@@ -1,0 +1,23 @@
+Lights in trailer park vans that shine out and go away in phase 2
+
+Press start
+1: description de la problematique
+2: Description des controles
+3: essayer de manger des lucioles
+
+When player apporaches light:
+- Vous ne pouvez pas approcher la lumiere, les chauve souris sont luminophobes
+
+When player fails to eat
+1: Controls taken back
+2: Return to nest hungry and "sad"
+
+Phase 2:
+1: Fade out from black, Noir totale - pour un avenir plus clair
+2: Description of what we should do
+3: Hunting fireflies is easy.
+4: After having eaten some goes back to nest happy
+
+Ending screen describes message and credits
+
+Back to starting screen
