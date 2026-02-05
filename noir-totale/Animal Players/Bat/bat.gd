@@ -25,6 +25,11 @@ var crashed := false
 
 var shake := 0.0
 
+signal update_hunger
+
+func _ready() -> void:
+	update_hunger.emit(100)
+
 func add_shake(amount):
 	shake = amount
 
@@ -43,6 +48,7 @@ func _physics_process(delta):
 	flap_timer -= delta
 
 	hunger -= hunger_rate * delta
+	update_hunger.emit(hunger)
 	hunger = clamp(hunger, 0, 100)
 
 	if hunger <= 0:
@@ -122,6 +128,7 @@ func eat_insect():
 	hunger += hunger_gain
 	hunger = clamp(hunger, 0, 100)
 	print("Ate insect! Hunger:", hunger)
+	update_hunger.emit(hunger)
 
 func apply_repulsion(force: Vector3):
 	velocity = force
