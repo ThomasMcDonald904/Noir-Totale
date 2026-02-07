@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b7xotth7g1y3g" path="res://World/trailer_park.glb" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://box5yls1va82w" path="res://Animal Players/Bat/bat.scn" id="4_aqk2v"]
 [ext_resource type="AudioStream" uid="uid://bvqxho1jdf8i6" path="res://Audio/background_nature.wav" id="5_036b0"]
-[ext_resource type="Script" uid="uid://dk33oyuso4gam" path="res://health_bar.gd" id="6_dwbse"]
+[ext_resource type="Script" path="res://health_bar.gd" id="6_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 energy_multiplier = 0.1

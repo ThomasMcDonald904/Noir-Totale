@@ -15,7 +15,7 @@ var pulse_radius := 0.0
 @export var pulse_max_radius := 15
 
 var hunger := 100.0
-@export var hunger_rate := 5.0
+@export var hunger_rate := 3.0
 @export var hunger_gain := 20.0
 
 
@@ -24,6 +24,11 @@ var crashed := false
 
 
 var shake := 0.0
+
+var reversing := false
+var reverse_timer := 0.0
+var reverse_duration := 0.6
+var reverse_dir := Vector3.ZERO
 
 signal update_hunger
 
@@ -54,6 +59,26 @@ func _physics_process(delta):
 	if hunger <= 0:
 		print("You starved")
 
+		# --- REPULSION REVERSAL ---
+	if reversing:
+		reverse_timer -= delta
+
+		# 1. Smoothly cancel velocity
+		var velocity_change_factor = 4
+		velocity = lerp(velocity, Vector3.ZERO, delta * velocity_change_factor)
+
+		# 2. Smoothly rotate bat to face opposite direction
+		var target_rot = atan2(reverse_dir.x, reverse_dir.z) + PI
+		rotation.y = lerp_angle(rotation.y, target_rot, delta * .6)
+
+		# 3. When timer ends, re-accelerate in opposite direction
+		if reverse_timer <= 0.0:
+			reversing = false 
+
+			# give a clean push in the opposite direction
+			var forward = -transform.basis.z
+			velocity.x = forward.x * forward_speed
+			velocity.z = forward.z * forward_speed
 
 	# --- MOUSE AIMING ---
 	var viewport_center = get_viewport().size / 2.0
@@ -130,5 +155,9 @@ func eat_insect():
 	print("Ate insect! Hunger:", hunger)
 	update_hunger.emit(hunger)
 
-func apply_repulsion(force: Vector3):
-	velocity = force
+func apply_repulsion_reversal(dir: Vector3):
+	if reversing == false:
+		$Node/Screech.play()
+	reversing = true
+	reverse_timer = reverse_duration
+	reverse_dir = dir

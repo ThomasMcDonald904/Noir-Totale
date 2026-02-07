@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bhrhei61injql"]
+
+[ext_resource type="Script" uid="uid://bdydy7linmkxe" path="res://starting_menu.gd" id="1_h7u1h"]
+[ext_resource type="Theme" uid="uid://5c6uvxjitaw5" path="res://new_theme.tres" id="2_tftqu"]
+
+[node name="StartingMenu" type="Control" unique_id=1143774023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h7u1h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1363406478]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=58453846]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1979850766]
+layout_mode = 2
+theme = ExtResource("2_tftqu")
+
+[node name="ButtonCommencer" type="Button" parent="VBoxContainer/MarginContainer" unique_id=1202652321]
+layout_mode = 2
+theme = ExtResource("2_tftqu")
+theme_override_font_sizes/font_size = 75
+text = "Commencer"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=530867764]
+layout_mode = 2
+theme = ExtResource("2_tftqu")
+
+[node name="ButtonCredits" type="Button" parent="VBoxContainer/MarginContainer2" unique_id=1494794655]
+layout_mode = 2
+theme = ExtResource("2_tftqu")
+theme_override_font_sizes/font_size = 75
+text = "Crédits
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=677482019]
+layout_mode = 2
+theme = ExtResource("2_tftqu")
+
+[node name="ButtonExit" type="Button" parent="VBoxContainer/MarginContainer3" unique_id=1440090121]
+layout_mode = 2
+theme = ExtResource("2_tftqu")
+theme_override_font_sizes/font_size = 75
+text = "Sortir"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/ButtonCommencer" to="." method="_on_button_commencer_pressed"]
