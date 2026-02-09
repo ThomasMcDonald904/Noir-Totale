@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Noir Totale"
-run/main_scene="uid://uot8y2iuno6i"
+run/main_scene="uid://bhrhei61injql"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b7xotth7g1y3g" path="res://World/trailer_park.glb" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://box5yls1va82w" path="res://Animal Players/Bat/bat.scn" id="4_aqk2v"]
 [ext_resource type="AudioStream" uid="uid://bvqxho1jdf8i6" path="res://Audio/background_nature.wav" id="5_036b0"]
-[ext_resource type="Script" path="res://health_bar.gd" id="6_dwbse"]
+[ext_resource type="Script" uid="uid://dk33oyuso4gam" path="res://health_bar.gd" id="6_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 energy_multiplier = 0.1
@@ -120,15 +120,11 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -248.0
-offset_top = -105.0
+offset_top = -152.0
 offset_right = 248.0
+offset_bottom = -41.0
 grow_horizontal = 2
 grow_vertical = 0
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/VBoxContainer" unique_id=371198616]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-script = ExtResource("6_dwbse")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/VBoxContainer" unique_id=171694064]
 layout_mode = 2
@@ -136,6 +132,11 @@ size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "[center]Faim"
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/VBoxContainer" unique_id=371198616]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+script = ExtResource("6_dwbse")
 
 [node name="Insect3" parent="." unique_id=479024756 instance=ExtResource("1_aqk2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9365973, 0.30417776, 18.971123)

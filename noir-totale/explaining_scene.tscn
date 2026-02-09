@@ -39,7 +39,7 @@ text = "[center]De nombreuses espèces souffrent de la pollution lumineuse. Nota
 Cette expérience audio-visuelle tente de faire vivre ce problème.
 
 
-Essayez de chassez les lucioles"
+[left]Essayez de chassez les lucioles - utilisez la souris et le bouton [i]espace"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2043065454]
 layout_mode = 2
