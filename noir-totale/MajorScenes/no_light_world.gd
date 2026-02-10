@@ -5,4 +5,4 @@ extends Node3D
 func _ready() -> void:
 	$Streetlight.blackout()
 	$AnimationPlayer.play("fade_no_light_world")
-	$Bat.hunger_rate = 5
+	$Bat.hunger_rate = 2

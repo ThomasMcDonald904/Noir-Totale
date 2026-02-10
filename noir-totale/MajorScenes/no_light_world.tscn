@@ -12,7 +12,7 @@
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hb3hs"]
 panorama = ExtResource("4_08svk")
-energy_multiplier = 0.1
+energy_multiplier = 0.05
 
 [sub_resource type="Sky" id="Sky_h7vnd"]
 sky_material = SubResource("PanoramaSkyMaterial_hb3hs")
@@ -248,6 +248,27 @@ text = "Revenir au menu principal"
 
 [node name="Insect3" parent="." unique_id=479024756 instance=ExtResource("2_c12jf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9365973, 0.30417776, 18.971123)
+
+[node name="Insect4" parent="." unique_id=2012468971 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.53088, 1.0123839, 18.971123)
+
+[node name="Insect5" parent="." unique_id=953779403 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7032604, 7.6342335, 42.667404)
+
+[node name="Insect6" parent="." unique_id=817984237 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.69372, 6.9742365, -0.9788132)
+
+[node name="Insect7" parent="." unique_id=975249114 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.90599, 1.9235086, 35.02845)
+
+[node name="Insect8" parent="." unique_id=549217496 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9304695, 1.9235086, 31.14096)
+
+[node name="Insect9" parent="." unique_id=1580256328 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9304695, 1.9235086, -11.83688)
+
+[node name="Insect10" parent="." unique_id=992369610 instance=ExtResource("2_c12jf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.90264, 9.807164, -11.83688)
 
 [node name="NestMarker" type="Marker3D" parent="." unique_id=1265446385]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.16637, 8.099243, 123.51618)

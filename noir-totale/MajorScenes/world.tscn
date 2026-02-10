@@ -66,7 +66,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/MarginContainer/Proceder:visible")
+tracks/2/path = NodePath("CanvasLayer/Proceder:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -106,7 +106,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/MarginContainer/Proceder:visible")
+tracks/2/path = NodePath("CanvasLayer/Proceder:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -245,32 +245,36 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_gbfbk")
 bbcode_enabled = true
-text = "[center]À Trois‑Rivières, la pollution lumineuse perturbe profondément la vie nocturne. Vous en avez déjà vu les effets.
+text = "À Trois‑Rivières, la pollution lumineuse perturbe profondément la vie nocturne. Vous en avez déjà vu les effets.
 
-Mais il suffit parfois de gestes très simples pour redonner la nuit aux animaux : réduire l’intensité des lampadaires, orienter les lumières vers le sol, utiliser des ampoules plus chaudes, ou encore éteindre les enseignes et les projecteurs quand ils ne sont plus nécessaires.
+Mais il suffit parfois de gestes très simples pour redonner la nuit aux animaux : 
+[ul]
+Réduire l’intensité des lampadaires
+Orienter les lumières vers le sol
+Utiliser des ampoules plus chaudes
+Éteindre les enseignes et les projecteurs quand ils ne sont plus nécessaires.
+[/ul]
 
 Voyons maintenant comment la ville change lorsque ces mesures sont mises en place."
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1164272165]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -152.5
-offset_top = -96.0
-offset_right = 152.5
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("8_gbfbk")
-
-[node name="Proceder" type="Button" parent="CanvasLayer/MarginContainer" unique_id=1803894226]
+[node name="Proceder" type="Button" parent="CanvasLayer" unique_id=1803894226]
 visible = false
-layout_mode = 2
+offset_left = 1307.0
+offset_top = 339.0
+offset_right = 1819.0
+offset_bottom = 591.0
 theme = ExtResource("8_gbfbk")
 text = "Proceder"
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1217249129]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -536.0
+offset_bottom = 234.0
+grow_horizontal = 0
 
 [node name="Insect3" parent="." unique_id=479024756 instance=ExtResource("1_aqk2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9365973, 0.30417776, 18.971123)
@@ -441,4 +445,4 @@ omni_range = 5.9300275
 
 [connection signal="starved" from="Bat" to="." method="_on_bat_starved"]
 [connection signal="update_hunger" from="Bat" to="CanvasLayer/VBoxContainer/ProgressBar" method="_on_bat_update_hunger"]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/Proceder" to="." method="_on_proceder_pressed"]
+[connection signal="pressed" from="CanvasLayer/Proceder" to="." method="_on_proceder_pressed"]
