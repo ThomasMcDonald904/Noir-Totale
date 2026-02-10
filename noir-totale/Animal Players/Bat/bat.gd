@@ -15,7 +15,7 @@ var pulse_radius := 0.0
 @export var pulse_max_radius := 15
 
 var hunger := 100.0
-@export var hunger_rate := 33
+@export var hunger_rate := 8
 @export var hunger_gain := 20.0
 
 
