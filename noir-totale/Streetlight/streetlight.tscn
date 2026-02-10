@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://crwv8xp61ohlf"]
 
 [ext_resource type="PackedScene" uid="uid://coy53tdc3mkyj" path="res://Streetlight/Utility Pole StreetLight.glb" id="1_8mcet"]
+[ext_resource type="Script" uid="uid://dxnql5uu2kan8" path="res://Streetlight/streetlight.gd" id="1_g71vl"]
 [ext_resource type="Script" uid="uid://cg54w2fq5eceg" path="res://Streetlight/LightRepulsion.gd" id="2_7hb2q"]
+[ext_resource type="Script" uid="uid://b6r2o1wkk77g0" path="res://Streetlight/ejection_zone.gd" id="3_uttne"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8mcet"]
 radius = 2.608121
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_7hb2q"]
+radius = 1.6963379
+
 [node name="Streetlight" type="Node3D" unique_id=2010003233]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("1_g71vl")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2012807981]
 transform = Transform3D(0.9994137, 1.4965323e-09, -0.03423667, 0.03423667, -4.3685763e-08, 0.9994137, 0, -1, -4.371139e-08, 0.47688675, 1.4883517, 0)
@@ -25,3 +31,10 @@ script = ExtResource("2_7hb2q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=178513582]
 shape = SubResource("SphereShape3D_8mcet")
+
+[node name="EjectionZone" type="Area3D" parent="." unique_id=1131093930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0131031675, 0)
+script = ExtResource("3_uttne")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EjectionZone" unique_id=1511663211]
+shape = SubResource("SphereShape3D_7hb2q")

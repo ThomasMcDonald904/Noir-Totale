@@ -1,13 +1,24 @@
 [gd_resource type="Theme" format=3 uid="uid://5c6uvxjitaw5"]
 
-[ext_resource type="FontFile" uid="uid://cijfko33pc5tv" path="res://Chalk-Regular.ttf" id="1_amlv4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amlv4"]
+bg_color = Color(0.032091275, 4.3317675e-07, 0.5624734, 0.654902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2q5q"]
+bg_color = Color(0.06673746, 0, 0.8127722, 0.654902)
+shadow_size = 1
+shadow_offset = Vector2(8.795, 12.625)
+
+[sub_resource type="SystemFont" id="SystemFont_j2q5q"]
+font_names = PackedStringArray("Sitka Banner")
 
 [resource]
 Button/font_sizes/font_size = 70
+Button/styles/hover = SubResource("StyleBoxFlat_amlv4")
+Button/styles/normal = SubResource("StyleBoxFlat_j2q5q")
 MarginContainer/constants/margin_bottom = 70
 MarginContainer/constants/margin_left = 430
 MarginContainer/constants/margin_right = 430
 MarginContainer/constants/margin_top = 3
 RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
 RichTextLabel/font_sizes/normal_font_size = 78
-RichTextLabel/fonts/normal_font = ExtResource("1_amlv4")
+RichTextLabel/fonts/normal_font = SubResource("SystemFont_j2q5q")
