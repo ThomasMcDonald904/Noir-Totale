@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://1brfup4qcvue"]
+
+[ext_resource type="Script" uid="uid://6khiuujarj4p" path="res://MajorScenes/credit_scene.gd" id="1_bcaxb"]
+[ext_resource type="Theme" uid="uid://5c6uvxjitaw5" path="res://new_theme.tres" id="1_sppo7"]
+
+[node name="CreditScene" type="Control" unique_id=1410570403]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcaxb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1121682044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=280791088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 34
+text = "Bruit d'ailes de chauve-souris : WINGMisc-CU_Bat Wings, Flapping_Nicholas Judy_TDC by designerschoice -- https://freesound.org/s/811528/ -- License: Creative Commons 0
+Model de chauve-souris : https://www.cgtrader.com/designers/nonecg?utm_source=credit&utm_source=credit_item_page
+Bruit d'echolocalisation : Bat, probably noctule, echolocation, slowed 10x by naturenotesuk -- https://freesound.org/s/813083/ -- License: Attribution 4.0
+Bruit d'insecte : Fly buzzing OWI.wav by nayahnaidoo -- https://freesound.org/s/656042/ -- License: Creative Commons 0
+Bruit de foret( de fond ) : Primitive Trail Wet Flatwoods Night.mp3 by KevinSonger -- https://freesound.org/s/636736/ -- License: Attribution NonCommercial 4.0
+Bruit de bouton : Minimal UI pack – pops clicks ticks.wav by DesignDean -- https://freesound.org/s/538236/ -- License: Creative Commons 0
+Bruit de mastiquation : Dog Crunching Crackers by Bon_Vivant_Pictures -- https://freesound.org/s/456366/ -- License: Creative Commons 0
+Bruit de repulsion : Crazy Creature Screeching 1_5 by Joao_Janz -- https://freesound.org/s/483767/ -- License: Creative Commons 0
+"
+
+[node name="Button" type="Button" parent="." unique_id=1392078950]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -271.0
+offset_top = -133.0
+offset_right = 271.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_sppo7")
+text = "Retour"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

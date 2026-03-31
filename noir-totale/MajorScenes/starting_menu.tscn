@@ -66,4 +66,5 @@ theme_override_font_sizes/font_size = 75
 text = "Sortir"
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/ButtonCommencer" to="." method="_on_button_commencer_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ButtonCredits" to="." method="_on_button_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer3/ButtonExit" to="." method="_on_button_exit_pressed"]

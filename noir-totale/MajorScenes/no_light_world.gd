@@ -6,3 +6,7 @@ func _ready() -> void:
 	$Streetlight.blackout()
 	$AnimationPlayer.play("fade_no_light_world")
 	$Bat.hunger_rate = 2
+
+
+func _on_sortir_pressed() -> void:
+	get_tree().quit()

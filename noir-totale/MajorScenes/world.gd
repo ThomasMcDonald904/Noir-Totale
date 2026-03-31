@@ -14,8 +14,10 @@ func _process(_delta: float) -> void:
 func _on_bat_starved() -> void:
 	var bat: CharacterBody3D = get_node("Bat")
 	var nest_marker := $NestMarker
+	var alert_panel := $CanvasLayer/AlertPanel
 	bat.move_camera(bat.CameraPos.AERIAL)
 	var tween = get_tree().create_tween()
+	tween.tween_callback(alert_panel.show)
 	tween.tween_property(bat, "global_position", Vector3(bat.global_position.x, 9, bat.global_position.z), 2)
 	tween.tween_property(bat, "global_position", nest_marker.global_position, 9)
 	
@@ -24,7 +26,6 @@ func _on_bat_starved() -> void:
 		nest_marker.global_position.z - bat.global_position.z
 	)
 	var target_yaw := atan2(dir_2d.x, dir_2d.y) + PI
-	
 	tween.parallel().tween_property(bat, "rotation:y", target_yaw, 3).set_trans(Tween.TRANS_CIRC)
 	tween.parallel().tween_callback($AnimationPlayer.play.bind("fade_to_new"))
 

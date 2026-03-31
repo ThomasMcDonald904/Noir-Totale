@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b7xotth7g1y3g" path="res://TrailerPark/trailer_park.glb" id="4_hpn2h"]
 [ext_resource type="PackedScene" uid="uid://box5yls1va82w" path="res://Animal Players/Bat/bat.scn" id="5_jjh10"]
 [ext_resource type="AudioStream" uid="uid://bvqxho1jdf8i6" path="res://Audio/background_nature.wav" id="6_v2sy7"]
-[ext_resource type="Script" path="res://health_bar.gd" id="7_7lpll"]
+[ext_resource type="Script" uid="uid://dk33oyuso4gam" path="res://health_bar.gd" id="7_7lpll"]
 [ext_resource type="Theme" uid="uid://5c6uvxjitaw5" path="res://new_theme.tres" id="8_1yfff"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hb3hs"]

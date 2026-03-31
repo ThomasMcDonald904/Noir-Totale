@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dipk5hoa1s3an"
+path="res://.godot/imported/Bebas Neue Thin.ttf-9511285f9c3f0d7710663884b4f27727.fontdata"
+
+[deps]
+
+source_file="res://UI/Bebas Neue Thin.ttf"
+dest_files=["res://.godot/imported/Bebas Neue Thin.ttf-9511285f9c3f0d7710663884b4f27727.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

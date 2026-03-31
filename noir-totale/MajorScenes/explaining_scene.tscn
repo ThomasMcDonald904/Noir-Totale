@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.003929942, 0.036550906, 0.14931777, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1605199864]
+[node name="FirstDialog" type="VBoxContainer" parent="." unique_id=1605199864]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +30,7 @@ offset_top = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=857544767]
+[node name="RichTextLabel" type="RichTextLabel" parent="FirstDialog" unique_id=857544767]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_0h4jn")
@@ -40,17 +40,46 @@ text = "[center]De nombreuses espèces souffrent de la pollution lumineuse. Nota
 Cette expérience audio-visuelle tente de faire vivre ce problème.
 
 
-Essayez de chasser les lucioles
+"
 
-Utilisez la souris et le bouton espace"
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=2043065454]
+[node name="MarginContainer" type="MarginContainer" parent="FirstDialog" unique_id=2043065454]
 layout_mode = 2
 theme = ExtResource("2_0h4jn")
 
-[node name="Button" type="Button" parent="VBoxContainer/MarginContainer" unique_id=39456526]
+[node name="Suite" type="Button" parent="FirstDialog/MarginContainer" unique_id=39456526]
+layout_mode = 2
+theme = ExtResource("2_0h4jn")
+text = "Suite"
+
+[node name="SecondDialog" type="VBoxContainer" parent="." unique_id=2066251259]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SecondDialog" unique_id=1577212027]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_0h4jn")
+bbcode_enabled = true
+text = "[center]Utilisez la souris pour vous orientez et le bouton espace pour battre des ailes.
+
+Les zones lumineuses vous repoussent du à votre luminophobie.
+
+Essayez de chasser les lucioles pour ne pas retourner à votre nid sans avoir mangé."
+
+[node name="MarginContainer" type="MarginContainer" parent="SecondDialog" unique_id=1388396122]
+layout_mode = 2
+theme = ExtResource("2_0h4jn")
+
+[node name="Continuer" type="Button" parent="SecondDialog/MarginContainer" unique_id=1253177397]
 layout_mode = 2
 theme = ExtResource("2_0h4jn")
 text = "Continuer à l'expérience"
 
-[connection signal="pressed" from="VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="FirstDialog/MarginContainer/Suite" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SecondDialog/MarginContainer/Continuer" to="." method="_on_continuer_pressed"]

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnptsoy288qqg" path="res://TrailerPark/sketchfab_scene.tscn" id="4_6spol"]
 [ext_resource type="PackedScene" uid="uid://box5yls1va82w" path="res://Animal Players/Bat/bat.scn" id="4_aqk2v"]
 [ext_resource type="AudioStream" uid="uid://bvqxho1jdf8i6" path="res://Audio/background_nature.wav" id="5_036b0"]
-[ext_resource type="Script" path="res://health_bar.gd" id="6_dwbse"]
+[ext_resource type="Script" uid="uid://dk33oyuso4gam" path="res://health_bar.gd" id="6_dwbse"]
 [ext_resource type="Theme" uid="uid://5c6uvxjitaw5" path="res://new_theme.tres" id="8_gbfbk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
@@ -75,6 +75,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/AlertPanel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_pkg7o"]
 resource_name = "fade_to_new"
@@ -114,6 +126,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/AlertPanel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gbfbk"]
@@ -268,13 +292,36 @@ offset_bottom = 591.0
 theme = ExtResource("8_gbfbk")
 text = "Proceder"
 
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1217249129]
-anchors_preset = 1
-anchor_left = 1.0
+[node name="AlertPanel" type="Panel" parent="CanvasLayer" unique_id=1217249129]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -117.0
+offset_right = 268.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_gbfbk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/AlertPanel" unique_id=1605656931]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -536.0
-offset_bottom = 234.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+offset_top = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_gbfbk")
+theme_type_variation = &"AlertText"
+theme_override_colors/default_color = Color(1, 0.18251956, 0.13418633, 1)
+theme_override_font_sizes/normal_font_size = 43
+bbcode_enabled = true
+text = "[center]Vous n'avez pas été capable de vous alimenter à cause de la pollution lumineuse.
+"
 
 [node name="Insect3" parent="." unique_id=479024756 instance=ExtResource("1_aqk2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9365973, 0.30417776, 18.971123)
